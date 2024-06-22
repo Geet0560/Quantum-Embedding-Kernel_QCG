@@ -69,7 +69,26 @@ opt = qml.GradientDescentOptimizer(0.2)
 svm_trained = SVC(kernel=trained_kernel_matrix).fit(X, Y)
 # Train the SVM classifier using the trained kernel
 ```
+```
+from sklearn.ensemble import RandomForestClassifier
 
+# Define the Random Forest classifier
+rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Train the classifier
+rf_classifier.fit(X, Y)
+
+```
+```
+from sklearn.neighbors import KNeighborsClassifier
+
+# Define the KNN classifier
+knn_classifier = KNeighborsClassifier(n_neighbors=5)
+
+# Train the classifier
+knn_classifier.fit(X, Y)
+
+```
  - **Results**
 The accuracy of the classifier is evaluated before and after the optimization of the kernel parameters.
 
